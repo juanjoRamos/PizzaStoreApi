@@ -17,5 +17,6 @@ app.MapGet("/", () => "Hello World!");
 Paso 2: Agregar Swagger para documentar los endpoints y poder visualizarlos de una forma gráfica.
 Con la terminal he tenido que acceder al directorio del proyecto dónde se encuentra el PizzaStore.csproj y allí ejecutar el comando:
 > dotnet add PizzaStore.csproj package Swashbuckle.AspNetCore -v 6.5.0
+
 Se ha descargado el nugget de OpenApi con swagger, añadadido las líneas del 2 commit y he probado la aplicación. Para poder acceder
 a swagger al final de la url le añadimos /swagger y nos lleva directamente.
