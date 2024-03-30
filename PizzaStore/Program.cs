@@ -1,3 +1,5 @@
+using PizzaStore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -22,5 +24,14 @@ app.UseSwaggerUI(c =>
 });
 
 app.MapGet("/", () => "Hello World!");
+
+// Agregar los endpoints.
+
+app.MapGet("/pizza/{id}", (int id) => PizzaDb.GetPizza(id));
+app.MapGet("/pizzas", () => PizzaDb.GetPizzas());
+app.MapPost("/pizzas", (Pizza pizza) => PizzaDb.CreatePizza(pizza));
+app.MapPut("/pizzas", (Pizza pizza) => PizzaDb.UpdatePizza(pizza));
+app.MapDelete("/pizzas/{id}", (int id) => PizzaDb.RemovePizza(id));
+
 
 app.Run();
