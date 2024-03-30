@@ -20,3 +20,5 @@ Con la terminal he tenido que acceder al directorio del proyecto dónde se encue
 
 Se ha descargado el nugget de OpenApi con swagger, añadadido las líneas del 2 commit y he probado la aplicación. Para poder acceder
 a swagger al final de la url le añadimos /swagger y nos lleva directamente.
+
+Paso 3: Creación de dos clases, una para una DTO que dará forma al objeto Pizza y luego otra que haremos como si fuera una base de datos con las funciones básicas de CRUD.
